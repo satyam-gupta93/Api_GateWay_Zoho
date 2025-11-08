@@ -1,0 +1,25 @@
+{
+  "name": "node-starter",
+  "private": true,
+  "scripts": {
+    "start": "node start.js",
+    "gateway": "node gateway.js",
+    "service1": "node services/payment-service-1.js",
+    "service2": "node services/payment-service-2.js",
+    "seed": "node scripts/seed.js",
+    "generate-token": "node scripts/generateToken.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.76.1",
+    "axios": "^1.12.2",
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.3",
+    "morgan": "^1.10.1",
+    "winston": "^3.18.3"
+  }
+}
