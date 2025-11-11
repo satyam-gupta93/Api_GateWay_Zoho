@@ -5,10 +5,12 @@ const connectDB = require('../utils/db');
 const User = require('../models/User');
 const ApiKey = require('../models/ApiKey');
 
+// user 
+
 async function seedDatabase() {
   await connectDB();
 
-  console.log('🌱 Starting MongoDB seed...');
+  console.log(' Starting MongoDB seed...');
   const password = 'testpassword123';
   const hashedPassword = await bcrypt.hash(password, 10);
 

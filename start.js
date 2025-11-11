@@ -22,7 +22,7 @@ const services = [
 const reset = '\x1b[0m';
 const processes = [];
 
-console.log('\n🚀 Starting Payment API Gateway System...\n');
+console.log('\nStarting Payment API Gateway System...\n');
 
 services.forEach((service) => {
   const proc = spawn('node', [service.script], {
@@ -46,7 +46,7 @@ services.forEach((service) => {
 });
 
 process.on('SIGINT', () => {
-  console.log('\n\n🛑 Shutting down all services...\n');
+  console.log('\n\n Shutting down all services...\n');
   processes.forEach(({ name, proc }) => {
     console.log(`Stopping ${name}...`);
     proc.kill();
@@ -54,9 +54,9 @@ process.on('SIGINT', () => {
   process.exit(0);
 });
 
-console.log('\n✅ All services started successfully!');
-console.log('\n📡 Service Endpoints:');
+console.log('\n All services started successfully!');
+console.log('\n Service Endpoints:');
 console.log('   - API Gateway:        http://localhost:4000');
 console.log('   - Payment Service 1:  http://localhost:5001');
 console.log('   - Payment Service 2:  http://localhost:5002');
-console.log('\n💡 Press Ctrl+C to stop all services\n');
+console.log('\n Press Ctrl+C to stop all services\n');

@@ -1,6 +1,8 @@
 import http from 'k6/http';
 import { sleep, check } from 'k6';
 
+// load test
+
 export const options = {
   stages: [
     { duration: '10s', target: 10 },

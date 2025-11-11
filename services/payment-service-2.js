@@ -4,6 +4,8 @@ const connectDB = require('../utils/db');
 const Payment = require('../models/Payment');
 const Refund = require('../models/Refund');
 
+// payment service - 2
+
 const app = express();
 const PORT = 5002;
 app.use(express.json());
@@ -55,4 +57,4 @@ app.get('/health', (req, res) => {
   res.json({ status: 'healthy', service: 'payment-service-2', port: PORT });
 });
 
-app.listen(PORT, () => console.log(`💳 Payment Service 2 running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Payment Service 2 running on port ${PORT}`));
