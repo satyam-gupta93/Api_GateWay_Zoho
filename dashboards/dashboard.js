@@ -114,5 +114,5 @@ app.get('/', async (req, res) => {
 
 // Start the dashboard server
 app.listen(PORT, () => {
-  console.log(`🚀 Dashboard is live at: http://localhost:${PORT}`);
+  console.log(`Dashboard is live at: http://localhost:${PORT}`);
 });
